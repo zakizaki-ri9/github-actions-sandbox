@@ -1,3 +1,6 @@
+![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Hello,%20World!/badge.svg)
+![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Cron%20Test/badge.svg)
+
 GitHub Actionsの素振りリポジトリ
 
 [ワークフローを設定する](https://help.github.com/ja/actions/automating-your-workflow-with-github-actions/configuring-a-workflow)を元に進めている。
@@ -28,3 +31,4 @@ GitHub Actionsの素振りリポジトリ
 cron式については以下を参照。
 
 - [Qiita - crontabのガイドライン](https://qiita.com/onomame/items/71646c5517a39bcd01cc)
+  - 最短のインターバルは**5分毎**
