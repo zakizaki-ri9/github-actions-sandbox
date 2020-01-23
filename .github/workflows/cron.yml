@@ -1,0 +1,11 @@
+name: Cron Test
+on:
+  schedule:
+    - cron: "0,30 * * * *"
+
+jobs:
+  build:
+    name: Cron Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Cron Test!"
