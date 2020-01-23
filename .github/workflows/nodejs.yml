@@ -1,0 +1,12 @@
+name: Nodejs Directory Push
+on:
+  push:
+    paths:
+      - "nodejs/**/*"
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "nodejs directory push"
