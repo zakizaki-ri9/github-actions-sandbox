@@ -9,6 +9,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
+      - uses: actions/setup-node@v1
       - run: |
           cd ./nodejs
-          cat index.ts
+          npm install
+          npx ts-node index.ts
