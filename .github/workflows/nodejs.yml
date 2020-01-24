@@ -5,8 +5,20 @@ on:
       - "nodejs/*"
 
 jobs:
-  build:
+  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
       - run: echo "nodejs directory push"
+    name: Greeting
+    runs-on: ubuntu-latest
+  checkout:
+    name: Checkout
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - run: |
+          cd ./nodejs
+          cat index.ts
