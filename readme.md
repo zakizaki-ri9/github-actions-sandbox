@@ -50,3 +50,21 @@ on:
 ```
 
 [nodejs.yml](.github/workflows/nodejs.yml)を参照
+
+### アクション
+
+- GitHub標準アクションが用意されている - [Organization actions](https://github.com/actions)
+
+#### [チェックアウトアクション](https://github.com/actions/checkout)
+
+リポジトリをチェックアウトするアクション、以下のような用途で使用する。
+
+- Lintチェック
+- ビルド
+- テスト
+- etc...
+
+```yml
+# 使用例
+- uses: actions/checkout@v2
+```
