@@ -5,8 +5,10 @@ on:
       - "nodejs/*"
 
 jobs:
-  build:
+  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
       - run: echo "nodejs directory push"
+    name: Greeting
+    runs-on: ubuntu-latest

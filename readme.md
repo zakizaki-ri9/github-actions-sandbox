@@ -1,6 +1,7 @@
 ![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Hello,%20World!/badge.svg)
 ![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Cron%20Test/badge.svg)
 ![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Nodejs%20Directory%20Push/badge.svg)
+![](https://github.com/zakizaki-ri9/github-actions-sandbox/workflows/Checkout/badge.svg)
 
 GitHub Actionsの素振りリポジトリ
 
