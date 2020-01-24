@@ -14,3 +14,4 @@ jobs:
           cd ./nodejs
           npm install
           npx ts-node index.ts
+          ls dist
