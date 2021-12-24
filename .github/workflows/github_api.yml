@@ -11,3 +11,4 @@ jobs:
           GITHUB_TOKEN: ${secrets.OWNER_TOKEN}
         run: |
             curl --dump-header - -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/zakizaki-ri9/github-actions-sandbox
+            curl --dump-header - -u zakizaki-ri9:${GITHUB_TOKEN} https://api.github.com/repos/zakizaki-ri9/github-actions-sandbox
