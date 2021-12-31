@@ -1,8 +1,5 @@
 name: GitHub Apps Access
-on:
-  push:
-    paths:
-      - "ruby/github_apps_test"
+on: workflow_dispatch
 
 defaults:
   run:
