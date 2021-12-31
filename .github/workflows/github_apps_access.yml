@@ -1,10 +1,6 @@
 name: GitHub Apps Access
 on: workflow_dispatch
 
-defaults:
-  run:
-    
-
 jobs:
   github_apps_access:
     name: github_apps_access
