@@ -1,0 +1,24 @@
+name: GitHub Apps Access
+on:
+  push:
+    paths:
+      - "ruby/github_apps_test"
+
+defaults:
+  run:
+    working-directory: ruby/github_apps_test
+
+jobs:
+  github_apps:
+    name: Rubocop with reviewdog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: fetch branch
+        run: git fetch --depth 1 origin ${{ env.TARGET_BRANCH }}
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+          bundler-cache: true
+      - name: run install_app_access
+        run: bundle exec ruby install_app_access.rb
