@@ -3,11 +3,11 @@ on: workflow_dispatch
 
 defaults:
   run:
-    working-directory: ruby/github_apps_test
+    
 
 jobs:
-  github_apps:
-    name: Rubocop with reviewdog
+  github_apps_access:
+    name: github_apps_access
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,5 +17,8 @@ jobs:
         with:
           ruby-version: '3'
           bundler-cache: true
+          working-directory: ruby/github_apps_test
       - name: run install_app_access
-        run: bundle exec ruby install_app_access.rb
+        run: |
+          cd ruby/github_apps_test
+          bundle exec ruby install_app_access.rb
