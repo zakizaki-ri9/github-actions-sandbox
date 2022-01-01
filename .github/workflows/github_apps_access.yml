@@ -15,6 +15,10 @@ jobs:
           bundler-cache: true
           working-directory: ruby/github_apps_test
       - name: run install_app_access
+        env:
+          APP_IDENTIFIER: ${{ secrets.APP_IDENTIFIER }}
+          INSTALLATION_ID: ${{ secrets.INSTALLATION_ID }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: |
           cd ruby/github_apps_test
           bundle exec ruby install_app_access.rb

@@ -30,14 +30,14 @@ set :bind, '0.0.0.0'
 class GHAapp < Sinatra::Application
 
   # Expects that the private key in PEM format. Converts the newlines
-  PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV['GITHUB_PRIVATE_KEY'].gsub('\n', "\n"))
+  PRIVATE_KEY = OpenSSL::PKey::RSA.new(ENV['PRIVATE_KEY'].gsub('\n', "\n"))
 
   # Your registered app must have a secret set. The secret is used to verify
   # that webhooks are sent by GitHub.
-  WEBHOOK_SECRET = ENV['GITHUB_WEBHOOK_SECRET']
+  WEBHOOK_SECRET = ENV['WEBHOOK_SECRET']
 
   # The GitHub App's identifier (type integer) set when registering an app.
-  APP_IDENTIFIER = ENV['GITHUB_APP_IDENTIFIER']
+  APP_IDENTIFIER = ENV['APP_IDENTIFIER']
 
   # Turn on Sinatra's verbose logging during development
   configure :development do

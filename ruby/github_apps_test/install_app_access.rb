@@ -7,7 +7,7 @@ require 'dotenv/load' # Manages environment variables
 
 def generate_jwt
   # Private key contents
-  private_key = OpenSSL::PKey::RSA.new(ENV['GITHUB_PRIVATE_KEY'].gsub('\n', "\n"))
+  private_key = OpenSSL::PKey::RSA.new(ENV['PRIVATE_KEY'].gsub('\n', "\n"))
 
   # Generate the JWT
   payload = {
@@ -16,7 +16,7 @@ def generate_jwt
     # JWT expiration time (10 minute maximum)
     exp: Time.now.to_i + (10 * 60),
     # GitHub App's identifier
-    iss: ENV['GITHUB_APP_IDENTIFIER']
+    iss: ENV['APP_IDENTIFIER']
   }
 
   JWT.encode(payload, private_key, "RS256")
